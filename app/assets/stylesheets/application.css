@@ -10,6 +10,47 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+ *= require normalize
  *= require_self
  */
+
+#main {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/* sidebar */
+
+.main_sidebar {
+	width: 7%;
+	height: 100%;
+	background-color: #f8f8f8;
+}
+
+.img {
+	width: 50px;
+}
+
+
+
+.visible {
+	position: relative;
+}
+
+.hidden {
+	position: absolute;
+	display: none;
+	
+}
+
+.sidebar_item_img {
+	float: left;
+	margin-left: 15%;
+}

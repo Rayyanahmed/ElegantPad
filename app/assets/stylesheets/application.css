@@ -16,6 +16,7 @@
 
 /* main templates */
 
+
 #main {
 	width: 100vw;
 	height: 100vh;
@@ -34,22 +35,20 @@
 .main_content {
 	width: 93%;
 	height: 100%;
-	background-color: red;
 	overflow: hidden;
 }
 
 .main_index_item {
-	width: 40%;
+	width: 38%;
 	height: 100%;
 	float: left;
-	background-color: blue;
 	overflow: hidden;
+	border-right: 1px solid #ececec;
 }
 
 .main_show {
-	width: 60%;
+	width: 62%;
 	height: 100%;
-	background-color: green;
 	overflow: hidden;
 }
 
@@ -86,4 +85,38 @@ body {
 	margin-left: 15%;
 }
 
+/* index-item-container */
 
+.header_container {
+	height: 90px;
+	border-bottom: 1px solid #ececec;
+
+}
+
+.header_text_notes {
+	color: #878787;
+	display: inline-block;
+	vertical-align: top;
+	font-size: 21px;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	font-weight: 300;
+	line-height: 26px;
+	text-align: left;
+	font-family: gotham, helvetica, arial, sans-serif;
+	padding: 20px;
+}
+
+.notes_count_text {
+	color: #ababab;
+	font-size: 13px;
+	font-weight: 400;
+	padding-left: 18px;
+}
+
+.notes_list_item {
+	height: 150px;
+	border-bottom: 1px solid #ececec;
+	
+
+}

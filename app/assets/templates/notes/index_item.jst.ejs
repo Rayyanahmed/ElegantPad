@@ -1,6 +1,11 @@
-NOTE ITEM
-
 <div class="notes_list_item">
-	<%= note.escape("title") %>
-	<%= note.escape("content") %>
+	<div class="time_ago">
+		minutes ago
+	</div>
+	<div class="notes_item_title">
+		<%= note.escape("title") %>
+	</div>
+	<div class="notes_item_content">
+		<%= note.escape("content") %>
+	</div>
 </div>

@@ -14,12 +14,45 @@
  *= require_self
  */
 
+/* main templates */
+
 #main {
 	width: 100vw;
 	height: 100vh;
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
 }
+
+.main_sidebar {
+	width: 7%;
+	height: 100%;
+	float: left;
+	background-color: #f8f8f8;
+}
+
+.main_content {
+	width: 93%;
+	height: 100%;
+	background-color: red;
+	overflow: hidden;
+}
+
+.main_index_item {
+	width: 40%;
+	height: 100%;
+	float: left;
+	background-color: blue;
+	overflow: hidden;
+}
+
+.main_show {
+	width: 60%;
+	height: 100%;
+	background-color: green;
+	overflow: hidden;
+}
+
 
 body {
 	margin: 0;
@@ -28,29 +61,29 @@ body {
 
 /* sidebar */
 
-.main_sidebar {
-	width: 7%;
-	height: 100%;
-	background-color: #f8f8f8;
-}
 
-.img {
+#sidebarImg {
 	width: 50px;
 }
-
 
 
 .visible {
 	position: relative;
 }
 
+.visible:hover {
+	display: none;
+}
+
+
 .hidden {
 	position: absolute;
 	display: none;
-	
 }
 
 .sidebar_item_img {
 	float: left;
 	margin-left: 15%;
 }
+
+

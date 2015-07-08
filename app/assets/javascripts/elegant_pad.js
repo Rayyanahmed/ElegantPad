@@ -14,7 +14,7 @@ window.ElegantPad = {
 			$indexItem: $indexItem,
 			$show: $show
 		})
-
+		Backbone.history.start();
 	}
 };
 

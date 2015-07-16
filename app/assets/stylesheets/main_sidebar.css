@@ -5,3 +5,13 @@ section.main_sidebar {
 	margin: 0;
 	background-color: #f8f8f8;
 }
+
+div.sidebar_container {
+	width: 100%;
+	height: 100%;
+}
+
+div.header_img {
+	margin-left: 17px;
+	margin-top: 12px;
+}

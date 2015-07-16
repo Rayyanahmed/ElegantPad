@@ -16,155 +16,24 @@
 
 /* main templates */
 
+@import "main_sidebar.css";
+@import "main_index_item.css";
+@import "main_show.css";
+
+
 
 #main {
 	width: 100vw;
 	height: 100vh;
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
+	min-height: 500px;
+	min-width: 600px;
 }
-
-.main_sidebar {
-	width: 7%;
-	height: 100%;
-	float: left;
-	background-color: #f8f8f8;
-}
-
-.main_content {
-	width: 93%;
-	height: 100%;
-	overflow: hidden;
-}
-
-.main_index_item {
-	width: 38%;
-	height: 100%;
-	float: left;
-	overflow: hidden;
-	border-right: 1px solid #ececec;
-}
-
-.main_show {
-	width: 62%;
-	height: 100%;
-	overflow: hidden;
-}
-
-ul {
-	list-style: none; 
-}
-
 
 body {
 	margin: 0;
 	padding: 0;
 }
 
-/* sidebar */
 
-
-#sidebarImg {
-	width: 50px;
-}
-
-
-.visible {
-	position: relative;
-}
-
-.visible:hover {
-	display: none;
-}
-
-
-.hidden {
-	position: absolute;
-	display: none;
-}
-
-.sidebar_item_img {
-	float: left;
-	margin-left: 15%;
-}
-
-/* index-item-container */
-
-.header_container {
-	height: 90px;
-	border-bottom: 1px solid #ececec;
-}
-
-.header_text_notes {
-	color: #878787;
-	display: inline-block;
-	vertical-align: top;
-	font-size: 21px;
-	letter-spacing: 0.5px;
-	text-transform: uppercase;
-	font-weight: 300;
-	line-height: 26px;
-	text-align: left;
-	font-family: gotham, helvetica, arial, sans-serif;
-	padding: 20px;
-}
-
-.notes_count_text {
-	color: #ababab;
-	font-size: 13px;
-	font-weight: 400;
-	padding-left: 18px;
-}
-
-.notes_container {
-
-}
-
-.notes_list_item {
-	height: 150px;
-	border-bottom: 1px solid #ececec;
-	width: ;
-	position: relative;
-	cursor: pointer;
-}
-
-.notes_list_item:hover {
-	background-color: #2DBE60;
-}
-
-.time_ago {
-	color: #878787;
-	margin-bottom: 9px;
-	font-family: gotham, helvetica, arial, sans-serif;
-	font-size: 11px;
-	font-weight: 400;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-}
-
-.notes_item_title {
-	color: #4a4a4a;
-	line-height: 18px;
-	margin-bottom: 4px;
-	overflow: hidden;
-	overflow-wrap: break-word;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	word-wrap: break-word;
-	font-family: caecilia, times, serif;
-	font-size: 16px;
-	font-weight: 400;
-}
-
-.notes_item_content {
-	color: #878787;
-	font-size: 12px;
-	font-weight: 400;
-	line-height: 17px;
-	font-family: gotham, helvetica, arial, sans-serif;
-	display: block;
-	overflow-wrap: break-word;
-	word-wrap: break-word;
-	text-align: left;
-}

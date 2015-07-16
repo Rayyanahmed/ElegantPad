@@ -2,7 +2,7 @@ ElegantPad.Routers.Router = Backbone.Router.extend({
 	initialize: function(options) {
 		this.$rootEl = options.$rootEl;
 		this.$indexItem = options.$indexItem;
-		this.$main = options.$main;
+		this.$show = options.$show;
 		this.notebooks = new ElegantPad.Collections.Notebooks();
 		this.notes = new ElegantPad.Collections.Notes();
 	},
@@ -10,6 +10,7 @@ ElegantPad.Routers.Router = Backbone.Router.extend({
 	routes: {
 		"": "notesIndex",
 		"notebooks": "notebooksIndex",
+		"notes/:id": "noteShow"
 
 	},
 
@@ -21,11 +22,22 @@ ElegantPad.Routers.Router = Backbone.Router.extend({
 		this._swapIndexView(view)
 	},
 
+	noteShow: function(id) {
+		this.notes.fetch();
+		this.notebooks.fetch();
+		var note = new ElegantPad.Models.Note();
+		var view = new ElegantPad.Views.NotesShow({
+			collection: this.notes,
+			model: note,
+			notebooks: this.notebooks 
+		});
+		this._swapIndexView(view)
+	},
 
 	_swapView: function(view) {
 		this._currentView && this._currentView.remove();
 		this._currentView = view;
-		thsi.$rootEl.html(view.render().$el);
+		this.$rootEl.html(view.render().$el);
 	},
 
 	_swapIndexView: function(view) {
@@ -37,7 +49,7 @@ ElegantPad.Routers.Router = Backbone.Router.extend({
 	_swapMainView: function(view) {
 		this._currentMainView && this._currentMainView.remove();
 		this._currentMainView = view;
-		this.$main.html(view.render().$el)
+		this.$show.html(view.render().$el)
 	}
 
 })

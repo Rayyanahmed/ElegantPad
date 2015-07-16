@@ -1,0 +1,18 @@
+div.notes_container {
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+}
+
+div.header_container {
+	width: 100%;
+	height: 19%;
+	display: block;
+	background-color: red;
+}
+
+div.notes_list {
+	width: 100%;
+	height: 81%;
+	background-color: blue;
+}

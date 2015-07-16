@@ -10,3 +10,4 @@ Note.destroy_all
 Notebook.destroy_all
 User.destroy_all
 
+User.create(email: "guest", password: "password")

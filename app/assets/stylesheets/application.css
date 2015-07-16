@@ -31,9 +31,33 @@
 	min-width: 600px;
 }
 
+.main_content {
+	width: 100%;
+	height: 100%;
+	background-color: blue;
+}
+
+.main_index_item {
+	width: 35%;
+	height: 100%;
+	float: left;
+	background-color: white;
+}
+
+.main_show {
+	width: 59.5%;
+	height: 100%;
+	float: right;
+	background-color: green;
+}
+
 body {
 	margin: 0;
 	padding: 0;
+}
+
+html, body {
+	height: 100%;
 }
 
 

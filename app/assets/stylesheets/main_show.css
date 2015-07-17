@@ -1,0 +1,59 @@
+div.note_show_container {
+	height: 100vh;
+	width: 100%;
+}
+
+div.note_header_icons {
+	height: 22.5%;
+	width: 100%;
+	
+}
+
+div.note_form_container {
+	height: 77.5%;
+	width: 100%;
+}
+
+input.note_title {
+	background: none;
+	border: none;
+	outline: none;
+	width: 100%;
+	font-family: caecilia, times, serif;
+	font-size: 28px;
+	font-weight: 300;
+	color: #2dbe60;
+	line-height: 32px;
+	margin-top: 35px;
+}
+
+
+textarea.note_content {
+	background: none;
+	border: none;
+	outline: none;
+	width: 100%;
+	font-family: gotham, helvetica, arial, sans-serif;
+	font-size: 14px;
+	color: #383838;
+}
+
+form.note_form {
+	padding-left: 60px;
+}
+
+::-webkit-input-placeholder {
+   color: #2dbe60;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #2dbe60;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #2dbe60;  
+}
+
+:-ms-input-placeholder {  
+   color: #2dbe60;  
+}

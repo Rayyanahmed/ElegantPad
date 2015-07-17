@@ -25,6 +25,14 @@ ElegantPad.Routers.Router = Backbone.Router.extend({
 		this._swapIndexView(view)
 	},
 
+	notebooksIndex: function() {
+		this.notebooks.fetch();
+		var view = new ElegantPad.Views.NotebooksIndex({
+			collection: this.notebooks 
+		});
+		this._swapIndexView(view)
+	},
+
 	noteShow: function(id) {
 		this.notes.fetch();
 		this.notebooks.fetch();

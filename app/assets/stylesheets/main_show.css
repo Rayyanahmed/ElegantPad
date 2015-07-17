@@ -29,10 +29,13 @@ input.note_title {
 
 
 textarea.note_content {
+	margin-top: 10px;
+	margin-right: 20px;
 	background: none;
 	border: none;
 	outline: none;
-	width: 100%;
+	width: 600px;
+	height: 250px;
 	font-family: gotham, helvetica, arial, sans-serif;
 	font-size: 14px;
 	color: #383838;

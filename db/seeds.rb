@@ -10,4 +10,13 @@ Note.destroy_all
 Notebook.destroy_all
 User.destroy_all
 
-User.create(email: "guest", password: "password")
+guest = User.create(email: "guest", password: "password")
+
+5.times do 
+	guest.notebooks.create(title: Faker::Lorem.word)
+end
+
+10.times do 
+	notebook = guest.notebooks.sample
+	notebook.notes.create(title: Faker::Lorem.word, content: Faker::Lorem.paragraph)
+end

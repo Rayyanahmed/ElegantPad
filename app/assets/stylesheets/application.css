@@ -34,7 +34,7 @@
 .main_content {
 	width: 100%;
 	height: 100%;
-	background-color: blue;
+	
 }
 
 .main_index_item {
@@ -48,7 +48,7 @@
 	width: 59.5%;
 	height: 100%;
 	float: right;
-	background-color: green;
+	
 }
 
 body {
@@ -60,4 +60,6 @@ html, body {
 	height: 100%;
 }
 
-
+a {
+	text-decoration: none;
+}

@@ -3,6 +3,8 @@ ElegantPad.Views.NotesIndex = Backbone.View.extend({
 
 	initialize: function(options) {
 		this.listenTo(this.collection, "sync add remove", this.render);
+		this.listenTo(this.model, "sync", this.render);
+		this.listenTo(this.notebook, "sync", this.render);
 	},
 
 	render: function() {

@@ -1,3 +1,4 @@
+
 ElegantPad.Views.NotesIndexItem = Backbone.View.extend({
 	template: JST["notes/index_item"],
 

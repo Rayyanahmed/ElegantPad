@@ -1,18 +1,107 @@
 div.notes_container {
 	height: 100vh;
 	width: 100%;
+	border-right: ;
 	overflow: hidden;
+	border-right: 1px solid #ececec;
+}
+
+/* Notes List Item Header */
+
+div.header_text_notes {
+	color: #878787;
+	vertical-align: top;
+	font-size: 21px;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	font-weight: 300;
+	line-height: 26px;
+	font-family: gotham, helvetica, arial, sans-serif;
+}
+
+div.notes_count_text {
+	float: left;
+	color: #ababab;
+	font-family: gotham, helvetica, arial, sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+}
+
+div.header_text_notes {
+	margin-top: 25px;
+	margin-left: 20px;
+}
+
+div.notes_count_text {
+	margin-left: 20px;
+	margin-top: 37px;
+}
+
+/* Notes List Item */
+
+div.notes_list_content_container {
+	margin-left: 25px;
 }
 
 div.header_container {
 	width: 100%;
-	height: 19%;
+	height: 18%;
 	display: block;
-	background-color: red;
+	border-bottom: 1px solid #ececec;
 }
 
 div.notes_list {
 	width: 100%;
-	height: 81%;
-	background-color: blue;
+	height: 82%;
+}
+
+div.notes_list_item {
+	height: 130px;
+	border-bottom: 1px solid #ececec;
+	cursor: pointer;
+}
+
+div.notes_list_item:hover {
+	background-color: #2dbe60;
+}
+
+div.notes_list_item:hover div.time_ago {
+	color: white;
+}
+
+div.notes_list_item:hover div.notes_item_title {
+	color: white;
+}
+
+div.notes_list_item:hover div.notes_item_content {
+	color: white;
+}
+
+div.time_ago {
+	font-family: gotham, helvetica, arial, sans-serif;
+	color: #878787;
+	margin-bottom: 8px;
+	padding-top: 10px;
+	font-size: 11px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+div.notes_item_title {
+	color: #4a4a4a;
+	font-family: caecilia, times, serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	margin-bottom: 4px;
+	overflow: hidden;
+}
+
+div.notes_item_content {
+	font-family: gotham, helvetica, arial, sans-serif;
+	color: #878787;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 17px;
 }

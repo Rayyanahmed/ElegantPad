@@ -1,13 +1,19 @@
+
+<a href="#/notes/<%= note.get('id') %>">
 	<div class="notes_list_item">
 
-		<div class="time_ago">
-			minutes ago
-		</div>
-		<div class="notes_item_title">
-			<%= note.escape("title") %>
-		</div>
-		<div class="notes_item_content">
-			<%= note.escape("content") %>
+		<div class="notes_list_content_container">
+
+			<div class="time_ago">
+				minutes ago
+			</div>
+			<div class="notes_item_title">
+				<%= note.escape("title") %>
+			</div>
+			<div class="notes_item_content">
+				<%= note.escape("content") %>
+			</div>
 		</div>
 
 	</div>
+</a>

@@ -11,13 +11,16 @@ ElegantPad.Routers.Router = Backbone.Router.extend({
 		"": "notesIndex",
 		"notebooks": "notebooksIndex",
 		"notes/:id": "noteShow"
-
 	},
 
 	notesIndex: function() {
 		this.notes.fetch();
+		this.notebooks.fetch();
+		var note = new ElegantPad.Models.Note();
 		var view = new ElegantPad.Views.NotesIndex({ 
-			collection: this.notes 
+			collection: this.notes,
+			model: note,
+			notebooks: this.notebooks 
 		});
 		this._swapIndexView(view)
 	},
@@ -26,12 +29,12 @@ ElegantPad.Routers.Router = Backbone.Router.extend({
 		this.notes.fetch();
 		this.notebooks.fetch();
 		var note = new ElegantPad.Models.Note();
-		var view = new ElegantPad.Views.NotesShow({
+		var view = new ElegantPad.Views.NotesForm({
 			collection: this.notes,
 			model: note,
 			notebooks: this.notebooks 
 		});
-		this._swapIndexView(view)
+		this._swapMainView(view)
 	},
 
 	_swapView: function(view) {

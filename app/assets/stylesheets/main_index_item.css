@@ -86,6 +86,7 @@ div.time_ago {
 	font-weight: 400;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+	float: left;
 }
 
 div.notes_item_title {
@@ -96,6 +97,9 @@ div.notes_item_title {
 	line-height: 20px;
 	margin-bottom: 4px;
 	overflow: hidden;
+	display: block;
+	float: left;
+	clear: left;
 }
 
 div.notes_item_content {
@@ -104,6 +108,7 @@ div.notes_item_content {
 	font-size: 12px;
 	font-weight: 400;
 	line-height: 17px;
+	clear: left;
 }
 
 /* Notebook Index */
@@ -191,4 +196,35 @@ img.notebook_trash_hover_img {
 	float: right;
 	padding-top: 10px;
 	padding-right: 10px;
+}
+
+
+/* Notebook Show Header */
+
+div.notebook_show {
+	height: 100vh;
+	width: 100%;
+}
+
+div.notebook_header_content {
+	width: 100%;
+	height: 29%;
+	color: white;
+	background-color: #393d41;
+}
+
+div.notebook_show_title {
+	font-size: 18px;
+	line-height: 30px;
+	color: #fff;
+	font-family: caecilia, times, serif;
+	font-weight: 300;
+	margin-left: 180px;
+	padding-top: 25px;
+}
+
+/* Notebook Notes Index */
+
+div.notebook_note_item {
+	
 }

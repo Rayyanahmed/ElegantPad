@@ -1,10 +1,12 @@
-<div class="notebook_item_container">
-	<div class="notebook_title_text">
-		<%= notebook.escape("title") %>
-	</div>
-	<img class="notebook_trash_hover_img" src="assets/trash-visible.png" alt="">
-	<div class="notebook_count_text">
-		<%= notebook.notes().length %> Notes 
-	</div>
-<div>
+<a href="#/notebooks/<%= notebook.escape('id') %>">
+	<div class="notebook_item_container">
+		<div class="notebook_title_text">
+			<%= notebook.escape("title") %>
+		</div>
+		<img class="notebook_trash_hover_img" src="assets/trash-visible.png" alt="">
+		<div class="notebook_count_text">
+			<%= notebook.notes().length %> Notes 
+		</div>
+	<div>
+</a>
 

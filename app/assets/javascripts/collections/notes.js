@@ -1,6 +1,12 @@
 ElegantPad.Collections.Notes = Backbone.Collection.extend({
+
+	comparator: function(a) {
+		return a.get('title')
+	},
+
 	url: "api/notes",
 	model: ElegantPad.Models.Note,
+
 
 	getOrFetch: function(id) {
 		var note = this.get(id);

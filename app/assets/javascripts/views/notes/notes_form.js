@@ -1,8 +1,8 @@
-ElegantPad.Views.NotesForm = Backbone.View.extend({
-	template: JST['notes/form'],
+ElegantPad.Views.MainNotesForm = Backbone.View.extend({
+	template: JST['notes/main_form'],
 
 	events: {
-		"submit form": "submit"
+		"submit form": "submit",
 	},
 
 	initialize: function(options) {

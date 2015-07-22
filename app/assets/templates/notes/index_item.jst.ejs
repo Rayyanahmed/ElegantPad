@@ -1,5 +1,6 @@
 
 <a href="#/notes/<%= note.get('id') %>">
+
 	<div class="notes_list_item">
 
 		<div class="notes_list_content_container">
@@ -7,9 +8,13 @@
 			<div class="time_ago">
 				minutes ago
 			</div>
+
+			<img class="notebook_trash_hover_img" src="assets/trash-visible.png" alt="">
+			
 			<div class="notes_item_title">
 				<%= note.escape("title") %>
 			</div>
+			
 			<div class="notes_item_content">
 				<%= note.escape("content") %>
 			</div>

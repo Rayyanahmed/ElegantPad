@@ -1,0 +1,26 @@
+<div class="note_show_container">
+	<div class="note_header_icons">
+	</div>
+
+	<div class="note_form_container">
+		<form class="note_form">
+		    <select id="note_notebook_id" name="notebook_id">
+		    <% _(notebooks.models).each(function(notebook) { %>
+		      <option value="<%= notebook.id %>">
+		        <%= notebook.escape("title") %>
+		      </option>
+		    <% }) %>
+		  </select>
+		  <br>
+		  <input type="text"
+		         name="title"
+		         class="note_title"
+		         value="<%= note.escape('title') %>"
+		         placeholder="Title your note">
+		  <br>
+		  <textarea class="note_content" name="content"><%= note.escape("content") %></textarea>
+		  <br>
+		  <input type="submit" value="Submit">
+		</form>
+	</div>
+</div>

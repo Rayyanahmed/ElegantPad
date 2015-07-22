@@ -3,7 +3,13 @@ ElegantPad.Views.NotesIndexItem = Backbone.View.extend({
 	template: JST["notes/index_item"],
 
 	events: {
-		"click .notebook_trash_hover_img": "deleteNote"
+		"click img.notebook_trash_hover_img": "renderModal"
+	},
+
+	renderModal: function(event) {
+		new ElegantPad.Views.NoteDeleteModal({
+			model: this.model
+		})
 	},
 
 	deleteNote: function(event) {

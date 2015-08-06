@@ -4,6 +4,18 @@ ElegantPad.Views.NotebooksIndex = Backbone.View.extend({
 		this.listenTo(this.collection, "sync add remove", this.render);
 	},
 
+	events: {
+		"click img.add_notebook_img": "renderModal"
+	},
+
+	renderModal: function(event) {
+		var notebook = new ElegantPad.Models.Notebook();
+		new ElegantPad.Views.NotebookForm({
+			model: notebook,
+			collection: this.collection
+		})
+	},
+
 	render: function() {
 		var content = this.template();
 		this.$el.html(content);

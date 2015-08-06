@@ -2,20 +2,18 @@
 	<div class="modal" style="top: <%= dim.top %>px; left: <%= dim.left %>px;">
 
 		<div class="trash_logo">
-			<img src="assets/delete-trash.png" alt="">
+			<img src="assets/create_notebook.png" alt="">
 		</div>
 
 		<div class="modal_header">
-		Delete Note/Notebook
+		CREATE NOTEBOOK
 		</div>
 
-		<div class="modal_content">
-		Are you sure you want to delete <%= model.title %>
-		</div>
+		<input type="text" class="notebook_title" name="title" placeholder="Title your notebook">
 
 		<div class="modal_buttons">
 			<button class="cancel">Cancel</button>
-			<button class="confirm">Confirm</button>
+			<button class="confirm">Create notebook</button>
 		</div>
 	</div>
 </div>

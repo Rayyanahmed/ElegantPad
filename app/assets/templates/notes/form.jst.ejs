@@ -4,7 +4,7 @@
 
 	<div class="note_form_container">
 		<form class="note_form">
-		    <select id="note_notebook_id" name="notebook_id">
+		    <select id="notebook_id" name="notebook_id">
 		    <% _(notebooks.models).each(function(notebook) { %>
 		      <option value="<%= notebook.id %>">
 		        <%= notebook.escape("title") %>

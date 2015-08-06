@@ -2,6 +2,7 @@
 ElegantPad.Views.NotesIndexItem = Backbone.View.extend({
 	template: JST["notes/index_item"],
 
+
 	events: {
 		"click img.notebook_trash_hover_img": "renderModal"
 	},

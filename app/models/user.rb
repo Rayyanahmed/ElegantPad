@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   has_many :notebooks, foreign_key: :owner_id, class_name: :Notebook 
   has_many :notes, through: :notebooks, source: :notes 
   
+  has_many :tags
+  
   attr_reader :password
 
   after_initialize :ensure_session_token

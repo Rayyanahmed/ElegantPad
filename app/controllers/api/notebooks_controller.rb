@@ -15,8 +15,7 @@ class Api::NotebooksController < ApplicationController
 	end
 
 	def create
-		@notebook = Notebook.new(notebook_params)
-		@notebook.user = current_user
+		@notebook = current_user.notebooks.new(notebook_params)
 		if @notebook.save
 			render json: @notebook 
 		else
@@ -33,6 +32,7 @@ class Api::NotebooksController < ApplicationController
 	end
 
 	def destroy
+		@notebook = Notebook.find(params[:id])
 		if @notebook 
 			@notebook.destroy 
 			render json: {}

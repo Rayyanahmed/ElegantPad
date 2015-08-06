@@ -23,7 +23,7 @@ class Api::NotesController < ApplicationController
 
 	def update
 		@note = Note.find(params[:id])
-		if @note && @note.udpate(note_params)
+		if @note && @note.update(note_params)
 			render json: @note 
 		else
 			render json: @notes.errors.full_messages, status: :unprocessable_entity

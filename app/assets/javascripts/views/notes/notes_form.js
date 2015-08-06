@@ -23,13 +23,18 @@ ElegantPad.Views.MainNotesForm = Backbone.View.extend({
 	submit: function(event) {
 		var view = this;
 		event.preventDefault();
+		var params = {};
+		params.title = $(".note_title").val();
+		if (!this.model.get('id')) {
+			params.notebook_id = $("#notebook_id").val();
+		}
+		params.content = $(".note_content").val();
 
-		var params = $(event.currentTarget).serializeJSON();
 		this.model.save(params, {
 			success: function(model, response) {
-				this.collection.add(model);
-				
+				Backbone.history.navigate("#", { trigger: true })
 			}.bind(this)
 		})
+		
 	}
 })

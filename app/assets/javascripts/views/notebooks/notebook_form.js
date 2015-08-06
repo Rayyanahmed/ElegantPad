@@ -1,17 +1,26 @@
-ElegantPad.Views.NoteDeleteModal = Backbone.View.extend({
-	template: JST['notes/modal'],
+ElegantPad.Views.NotebookForm = Backbone.View.extend({
+	template: JST['notebooks/form'],
 
 	initialize: function(options) {
 		this.render();
 	},
 
-	events: { 
+	events: {
 		"click button.cancel": "cancel",
 		"click button.confirm": "confirm"
 	},
 
-	confirm: function() {
-		this.model.destroy();
+	confirm: function(event) {
+		
+		event.preventDefault();
+		var $params = this.$('.notebook_title')
+		var attr = $params.serializeJSON();
+		this.model.save(attr, {
+			success: function(model, response) {
+				this.collection.add(model);
+				Backbone.history.navigate("#/notebooks", { trigger: true })
+			}.bind(this)
+		});
 		this.remove();
 	},
 

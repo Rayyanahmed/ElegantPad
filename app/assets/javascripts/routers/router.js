@@ -14,6 +14,13 @@ ElegantPad.Routers.Router = Backbone.Router.extend({
 		"notebooks/new": "notebookNew",
 		"notes/new": "noteNew",
 		"notes/:id": "noteShow",
+		"search": "notesSearch"
+	},
+
+	notesSearch: function () {
+		var view = new ElegantPad.Views.NotesSearch();
+		this._swapIndexView(view)
+		view.$("#search-query").focus();
 	},
 
 	notesIndex: function() {

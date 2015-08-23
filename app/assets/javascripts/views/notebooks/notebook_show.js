@@ -6,6 +6,7 @@ ElegantPad.Views.NotebookShow = Backbone.View.extend({
 	},
 
 	render: function() {
+		this.model.notes().fetch();
 		this.collection = this.model.notes();
 		var content = this.template({notebook: this.model});
 		this.$el.html(content);

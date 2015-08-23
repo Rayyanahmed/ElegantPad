@@ -24,6 +24,53 @@
 @import "main_show.css";
 @import "modal.css";
 
+div.sign_in_container {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	background-image: url('background-image');
+	background-size: 100%;
+}
+
+h2.sign {
+	margin-left: 150px;
+}
+
+input.submit_form {
+	margin-left: 160px;
+	margin-top: 30px;
+}
+
+label.email {
+	margin-left: 20px;
+}
+
+div.form_container {
+	width: 400px;
+	height: 300px;
+	margin-left: 500px;
+	opacity: .8;
+	background-color: white;
+	border-radius: 5px;
+}
+
+label.email {
+	margin-left: 170px;
+}
+
+label.password {
+	margin-left: 160px;
+}
+
+input.email {
+	margin-left: 110px;
+	border-radius: 5px;
+}
+
+input.password {
+	margin-left: 110px;
+	border-radius: 3px;
+}
 
 
 #main {
@@ -52,7 +99,12 @@
 	width: 59.5%;
 	height: 100%;
 	float: right;
-	
+}
+
+input.submit_form {
+	border-radius: 4px;
+	background-color: teal;
+	color: white;
 }
 
 body {

@@ -35,6 +35,15 @@ class Api::NotesController < ApplicationController
 		@note.destroy
 		render json: {}
 	end
+  def search
+    if params[:query].present?
+      @notes = current_user.notes
+        .where("notes.title ~ :q OR notes.content ~ :q",
+          q: params[:query])
+    else
+      @notes = Note.none
+    end
+  end
 
 	private
 

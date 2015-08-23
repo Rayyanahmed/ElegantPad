@@ -41,6 +41,15 @@ textarea.note_content {
 	color: #383838;
 }
 
+.submit_note {
+	float: right;
+	margin-right: 225px;
+	border-radius: 10px;
+	background-color: #2DBE60;
+	color: white;
+	font-size: .8em;
+}
+
 form.note_form {
 	padding-left: 60px;
 }

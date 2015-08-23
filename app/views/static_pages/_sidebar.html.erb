@@ -15,6 +15,7 @@
 		</div>
 	</a>
 
+	<a href="#/search">
 		<div class="search_img">
 			<img class="sidebar_img search_visible" src="assets/search-visible" alt="">
 			<img class="sidebar_img search_hidden" src="assets/search-hidden" alt="">
@@ -22,6 +23,7 @@
 				SEARCH
 			</span>
 		</div>
+	</a>
 
 	<a href="#">
 		<div class="notes_img">
@@ -45,8 +47,8 @@
 
 		<div class="logout">
 			<img class="logout_img" src="assets/logout.png" alt="">
+			<%= link_to "Sign Out", session_url, method: :delete %> 
 			<span class="logout_text">
-				LOG OUT
 			</span>
 		</div>
 </div>

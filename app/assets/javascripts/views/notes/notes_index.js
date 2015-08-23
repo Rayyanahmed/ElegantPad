@@ -8,7 +8,7 @@ ElegantPad.Views.NotesIndex = Backbone.View.extend({
 	},
 
 	render: function() {
-		this.$el.html(this.template());
+		this.$el.html(this.template({notes: this.collection}));
 		this.collection.each(function(note) {
 			var view = new ElegantPad.Views.NotesIndexItem({
 				model: note 

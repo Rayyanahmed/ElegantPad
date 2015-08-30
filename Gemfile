@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '4.2.1'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
@@ -13,11 +12,14 @@ gem 'jbuilder', '~> 2.0'
 # gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'backbone-on-rails'
 gem 'bcrypt', '~> 3.1.7'
-gem 'rails_12factor', group: :production
+
 group :production do 
 	gem 'thin'
 	gem 'pg'
+	gem 'rails_12factor'
 end
+
+
 
 group :doc do 
 	gem 'sdoc', require: false 

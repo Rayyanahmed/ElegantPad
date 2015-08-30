@@ -10,6 +10,7 @@ class Api::TagsController < ApplicationController
 			render :show 
 		else
 			render json: ['Unknown tag'], status: 404
+		end
 	end
 
 	def create

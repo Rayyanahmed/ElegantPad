@@ -10,10 +10,18 @@ gem 'faker'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
+# gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'backbone-on-rails'
 gem 'bcrypt', '~> 3.1.7'
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
+group :production do 
+	gem 'thin'
+	gem 'pg'
+end
+
+group :doc do 
+	gem 'sdoc', require: false 
+end
 
 
 group :development, :test do

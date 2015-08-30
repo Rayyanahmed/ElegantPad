@@ -18,6 +18,7 @@ end
 
 15.times do 
 	notebook = guest.notebooks.sample
-	content = 8 * (Faker::Lorem.paragraph)
+	content = Faker::Lorem.paragraph
+	content = content * 8
 	notebook.notes.create(title: Faker::Lorem.word, content: content)
 end

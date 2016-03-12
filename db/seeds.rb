@@ -12,6 +12,8 @@ User.destroy_all
 
 guest = User.create(email: "guest", password: "password")
 
+welcome_notebook = guest.notebooks.create(title: "Welcome Guest")
+
 10.times do 
 	guest.notebooks.create(title: Faker::Lorem.word)
 end

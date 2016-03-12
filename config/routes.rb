@@ -5,9 +5,8 @@ Rails.application.routes.draw do
 
  namespace :api, defaults: { format: :json } do 
  	resources :notebooks, except: [:new, :edit]
- 	resources :notes, except: [:new, :edit] do 
- 		get 'search', on: :collection 
- 	end
+ 	resources :notes, except: [:new, :edit]
  	resources :tags, except: [:new, :edit]
+ 	get '/search' => "notes#search"
  end
 end

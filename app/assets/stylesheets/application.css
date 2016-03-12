@@ -93,6 +93,7 @@ input.password {
 	height: 100%;
 	float: left;
 	background-color: white;
+	overflow: auto;
 }
 
 .main_show {
@@ -379,6 +380,8 @@ div.header_container {
 div.notes_list {
 	width: 100%;
 	height: 82%;
+	overflow: auto;
+
 }
 
 div.notes_list_item {
